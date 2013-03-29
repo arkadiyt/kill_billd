@@ -1,0 +1,8 @@
+{
+  "extensionName": {
+    "message": "Kill Billd"
+  },
+  "extensionDescription": {
+    "message": "Kill or rebuild columns of buildbot builds"
+  }
+}
