@@ -1,14 +1,17 @@
 (function() {
   "use strict";
 
+  var filter = Array.prototype.filter,
+      indexOf = Array.prototype.indexOf;
+
   function array_intersection(array1, array2) {
-    return Array.prototype.filter.call(array1, function(element) {
+    return filter.call(array1, function(element) {
       return array2.indexOf(element) !== -1
     });
   }
 
   function alter_build(operation, classes) {
-    var index = Array.prototype.indexOf.call(this.parentElement.parentElement.children, this.parentElement);
+    var index = indexOf.call(this.parentElement.parentElement.children, this.parentElement);
     var elements = document.querySelectorAll('tr');
     for (var i = 0; i < elements.length; ++i) {
       var build = elements[i].children[index],
